@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 80%;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+    text-align: center;
+}
+
+.card p {
+    font-size: 1em;
+    margin: 5px 10px;
+    color: #666;
+}
+
+.card .email {
+    font-style: italic;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.card .location {
+    font-weight: bold;
+    cursor: pointer;
+    color: #007BFF;
+}
+
+.card .flag {
+    width: 24px;
+    height: 18px;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spinnerOverLay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinnerContainer{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    border-radius: 50%;
+}
+
+.spinnerContainer span{
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: 90%;
+    display: block;
+    border-left-color:#007bff ;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear ;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
